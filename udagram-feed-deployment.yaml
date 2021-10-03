@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: feed-microservice
+  labels:
+    app: feed-microservice
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: feed-microservice
+  template:
+    metadata:
+      labels:
+        app: feed-microservice
+    spec:
+      containers:
+      - name: udagram-feed
+        image: ankugarg580/udagram-feed
+        ports:
+        - containerPort: 8080

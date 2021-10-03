@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: users-microservice
+  labels:
+    run: users-microservice
+spec:
+  ports:
+  - port: 8080
+    protocol: TCP
+  selector:
+    run: users-microservice
