@@ -19,3 +19,7 @@ spec:
         image: ankugarg580/udagram-frontend
         ports:
         - containerPort: 8100
+        resources:
+          requests:
+            memory: "128Mi"
+            cpu: "500m"
